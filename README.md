@@ -50,4 +50,14 @@ To get your gradient use the grad method as follows
       l.b -= lr*dC_db
       
       
+      
+ Todo:
+ - [x] Implement fully connected layer
+ - [] Make better interface for training network
+ - [] Get backpropagation to work for Convolutional layers
+ - [] Make Convolutional layers to work with fully connected layers
+ - [] Create dataloader class for user to test network on dataset
+ - [] Implement more loss functions and optiizers (momentum, adam, nesterov, ect.)
+      
+      
     
