@@ -10,7 +10,8 @@ Use the Layer class to define each layer as follows:
     Layer(input_dim, output_dim, activation)
     e.g. Layer(500, 300, 'relu')
   
-To constuct your network define all layers and put them in an array (in order).
+The network class is essentially a doubly linked list that handles the forward an back progagation.
+To constuct your network define all layers and put them in an array (in order). Pass this as an argument into the Network constructor.
     
     example:
     L1 = Layer(500, 300, 'relu')
