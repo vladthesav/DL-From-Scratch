@@ -53,6 +53,7 @@ To get your gradient use the grad method as follows
       
  Todo:
  - [x] Implement fully connected layer
+ - [] Add l1 and l2 regularization
  - [] Make better interface for training network
  - [] Get backpropagation to work for Convolutional layers
  - [] Make Convolutional layers to work with fully connected layers
