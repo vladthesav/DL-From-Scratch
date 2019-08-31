@@ -6,21 +6,24 @@ cross_entropy_grad = lambda y, y_hat: -y*(y_hat+.000001)**-1 + (1-y)*(1.000001-y
 
 class Layer():
   def __init__(self, inputs, outputs, activation):
+    #holds shape of parameters - make sure numpy gets array size right!
     self.W_shape = (outputs, inputs)
     self.b_shape = (outputs)
     
+    #now initialie params
     self.W = np.random.random(self.W_shape)/100
     self.b = np.random.random(self.b_shape)/100
     
+    #cool let's get the activation function and gradient now
     self.activation = activation_dict[activation][0]
     self.activation_grad = activation_dict[activation][1]
 
     #this comes in handy later
     self.prev = None
     self.next = None
-
+  
   def forward(self, z):
-    return sigmoid(np.dot(self.W, z)+self.b)
+    return self.activation(np.dot(self.W, z)+self.b)
 
   def delta(self, delta_prev, L_prev, z):
     return np.dot(L_prev.W.T, delta_prev)*self.activation_grad(z)
