@@ -19,6 +19,7 @@ class Network():
       i+=1
 
   def forward(self,z):
+    """forward pass defined here"""
     o = z
     for l in self.layers:
       o = l.forward(o)
@@ -46,6 +47,7 @@ class Network():
         deltas.append(self.layers[l].delta(deltas[-1], self.layers[l+1], outputs[l]))
       l-=1
     deltas = list(reversed(deltas))
+    
     #awesome now let's get the grads
     grad = []
     l = len(self.layers)-1
