@@ -3,7 +3,7 @@ Implementation of neural network in pure numpy.
 
 # Fully Connected Network
 The layer class is an interface to clean up my code and hide all the linear algebra. 
-It consists of a weight matrix (nxm numpy array), a bias vector (mx1 numpy array), and an actication (defined in Activations.py - using dictionary to store activation functions and their derivatives). This also includes helper methods and variables for intermediate results to do backpropation.
+It consists of a weight matrix (nxm numpy array), a bias vector (mx1 numpy array), and an activation (defined in Activations.py - using dictionary to store activation functions and their derivatives). This also includes helper methods and variables for intermediate results to do backpropation.
 
 Use the Layer class to define each layer as follows:
     
